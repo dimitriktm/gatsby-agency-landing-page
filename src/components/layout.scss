@@ -1,0 +1,69 @@
+@use "sass:map";
+$theme-colors: (
+  "primary": #0e77ff,
+);
+$enable-responsive-font-sizes: true;
+$font-family-base: Poppins;
+$font-size-base: 1.125rem;
+$h2-font-size: $font-size-base * 2.2;
+@import "~bootstrap/scss/bootstrap";
+
+.text-theme-primary-light {
+  color: #9abfff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+h1 {
+  line-height: 1.1;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+.button-rounded-full {
+  border-radius: 5000px;
+}
+.button-xl {
+  font-size: 1.56rem;
+  // font-size: $h4-font-size;
+  padding: 1.25rem 2.5rem;
+  line-height: 1;
+  border-width: 0.125rem;
+}
+
+.container {
+  max-width: 85rem;
+}
+
+.headings-group-section {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    order: 2;
+  }
+  h3 {
+    order: 1;
+
+    @extend .text-primary;
+    @extend .mb-0;
+    @extend .text-uppercase;
+  }
+}

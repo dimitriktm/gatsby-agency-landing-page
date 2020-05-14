@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="98" height="98" viewBox="0 0 98 98">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_11" data-name="Rectangle 11" width="98" height="98" transform="translate(140 2860)" fill="#0e77ff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-140 -2860)" clip-path="url(#clip-path)">
+    <g id="Google_Cloud_Logo" transform="translate(149.756 2877.561)">
+      <path id="Path_68" data-name="Path 68" d="M44.11,17.44h2.38l6.784-6.784.333-2.88A30.493,30.493,0,0,0,4,22.654a3.69,3.69,0,0,1,2.38-.143l13.569-2.238S20.639,19.131,21,19.2A16.925,16.925,0,0,1,44.158,17.44H44.11Z" transform="translate(5.415 -0.144)" fill="#0e77ff"/>
+      <path id="Path_69" data-name="Path 69" d="M46.83,18.214A30.565,30.565,0,0,0,37.618,3.36L28.1,12.882a16.925,16.925,0,0,1,6.213,13.426V28a8.474,8.474,0,0,1,0,16.949H17.36L15.67,46.66V56.825l1.69,1.69H34.309a22.043,22.043,0,0,0,12.521-40.3Z" transform="translate(21.525 4.296)" fill="#0e77ff"/>
+      <path id="Path_70" data-name="Path 70" d="M16.967,34.8H33.915V21.231H16.967a8.425,8.425,0,0,1-3.5-.761l-2.382.737L4.255,27.992l-.6,2.38A21.924,21.924,0,0,0,16.967,34.8Z" transform="translate(4.946 27.916)" fill="#0e77ff"/>
+      <path id="Path_71" data-name="Path 71" d="M21.957,8A22.043,22.043,0,0,0,8.651,47.515l9.831-9.831A8.474,8.474,0,1,1,29.694,26.472l9.831-9.831A22.019,22.019,0,0,0,21.957,8Z" transform="translate(-0.045 10.701)" fill="#0e77ff"/>
+    </g>
+  </g>
+</svg>
