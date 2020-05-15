@@ -2,7 +2,8 @@
   padding-top: 7.875rem;
   background-image: url(../../images/vectors/footer.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 50%;
+  background-position: left 100%;
 }
 
 #contact-form {
@@ -13,9 +14,22 @@
   margin-left: auto;
   box-shadow: 0 40px 60px rgba(#0e77ff, 0.15);
 
+  .contact-form-title {
+    margin-bottom: 2.875rem;
+  }
+  .form-group {
+    margin-bottom: 2.875rem;
+  }
   .form-control {
     border: none;
     border-bottom: solid 0.125rem #000;
     border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .form-control:focus,
+  .form-control:active {
+    outline: none !important;
+    border-color: #0e77ff;
   }
 }

@@ -1,32 +1,62 @@
 import React from "react"
 import Container from "react-bootstrap/Container"
 import Form from "react-bootstrap/Form"
+import FloatingLabel from "react-styled-floating-label"
+import BtnRoundedFull from "../../components/btn-rounded-full"
 import "./contacts.scss"
 export default () => (
   <section id="contacts">
     <Container>
       <Form id="contact-form">
-        <h3>Send us message</h3>
+        <h3 className="contact-form-title">Send us message</h3>
         <Form.Group>
-          <Form.Label>Email*</Form.Label>
-          <Form.Control></Form.Control>
+          <FloatingLabel text="Email*">
+            <Form.Control
+              className="shadow-none"
+              name="email"
+              required={true}
+            />
+          </FloatingLabel>
         </Form.Group>
         <Form.Group>
-          <Form.Label>Name*</Form.Label>
-          <Form.Control></Form.Control>
+          <FloatingLabel text="Name*">
+            <Form.Control className="shadow-none" name="name" required={true} />
+          </FloatingLabel>
         </Form.Group>
         <Form.Group>
-          <Form.Label>Phone number*</Form.Label>
-          <Form.Control></Form.Control>
+          <FloatingLabel text="Phone number*">
+            <Form.Control
+              className="shadow-none"
+              name="phone_number"
+              required={true}
+            />
+          </FloatingLabel>
         </Form.Group>
         <Form.Group>
-          <Form.Label>Subject</Form.Label>
-          <Form.Control></Form.Control>
+          <FloatingLabel text="Subject">
+            <Form.Control className="shadow-none" name="subject" />
+          </FloatingLabel>
         </Form.Group>
         <Form.Group>
-          <Form.Label>Message</Form.Label>
-          <Form.Control as="textarea"></Form.Control>
+          <FloatingLabel text="Message">
+            <Form.Control
+              className="shadow-none"
+              name="message"
+              as="textarea"
+              rows="3"
+            />
+          </FloatingLabel>
         </Form.Group>
+
+        <Form.Group>
+          <Form.Check
+            custom
+            type="checkbox"
+            id={`custom-checkbox`}
+            label={`By sending this message, you confirm that you have read and agreed to our privacy-policy.`}
+          />
+        </Form.Group>
+        <BtnRoundedFull>Send email</BtnRoundedFull>
       </Form>
     </Container>
   </section>
