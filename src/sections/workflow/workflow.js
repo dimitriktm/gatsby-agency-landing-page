@@ -5,8 +5,8 @@ import "./workflow.scss"
 export default () => (
   <section id="workflow">
     <Container>
-      <div className="workflow-header max-w-50">
-        <h2>Workflow</h2>
+      <div className="section-heading-block workflow-header">
+        <h2 className="section-heading-title">Workflow</h2>
         <p>
           Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex
           odio, is the turpis accu msan congue euisque blandit dui Pelle ntesque
@@ -14,8 +14,8 @@ export default () => (
         </p>
       </div>
     </Container>
-    <di className="workflow-grid">
-      <div className="workflow-col">
+    <di className="theme-items-grid">
+      <div className="theme-items-col">
         <CardWithLabel label="step 1" title="Send your brief">
           <>
             <p>
@@ -31,7 +31,7 @@ export default () => (
           </>
         </CardWithLabel>
       </div>
-      <div className="workflow-col">
+      <div className="theme-items-col">
         <CardWithLabel label="step 2" title="Wait for delivery">
           <>
             <p>
@@ -47,7 +47,7 @@ export default () => (
           </>
         </CardWithLabel>
       </div>
-      <div className="workflow-col">
+      <div className="theme-items-col">
         <CardWithLabel label="step 3" title="Get your files!">
           <>
             <p>

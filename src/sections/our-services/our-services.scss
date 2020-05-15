@@ -2,17 +2,15 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins/_breakpoints";
-$theme-colors: (
-  "primary": #0e77ff,
-  "primary-lighter": #16b2ff,
-);
+@import "../../sass/variables";
+
 #our-services {
-  background: rgba(map-get($map: $theme-colors, $key: primary), 0.02);
+  background: map-get($map: $theme-colors, $key: primary-background);
 
   @include media-breakpoint-up(md) {
     background: linear-gradient(
       to right,
-      rgba(map-get($map: $theme-colors, $key: primary), 0.02) 70%,
+      map-get($map: $theme-colors, $key: primary-background) 70%,
       rgba(map-get($map: $theme-colors, $key: primary), 1) 70%,
       rgba(map-get($map: $theme-colors, $key: primary), 1) 100%
     );
@@ -35,28 +33,31 @@ $theme-colors: (
     padding-right: 30%;
   }
 }
-.card-title {
-  margin-bottom: 2.5rem;
-}
-.services-card-body-text {
-  margin-bottom: 2.5rem;
-}
-.list-group-item,
-.card-body {
-  padding: 0;
-}
-.list-group-item {
-  padding-bottom: 1rem;
-}
-.list-group-item:last-child {
-  padding: 0;
-}
 
-.services-btns-group {
-  display: flex;
-  flex-wrap: wrap;
-}
-.services-btns-group > * {
-  margin-right: 0.8rem;
-  margin-bottom: 1.125rem;
+#out-services {
+  .card-title {
+    margin-bottom: 2.5rem;
+  }
+  .services-card-body-text {
+    margin-bottom: 2.5rem;
+  }
+  .list-group-item,
+  .card-body {
+    padding: 0;
+  }
+  .list-group-item {
+    padding-bottom: 1rem;
+  }
+  .list-group-item:last-child {
+    padding: 0;
+  }
+
+  .services-btns-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .services-btns-group > * {
+    margin-right: 0.8rem;
+    margin-bottom: 1.125rem;
+  }
 }

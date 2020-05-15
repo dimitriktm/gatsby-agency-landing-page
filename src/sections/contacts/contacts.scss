@@ -1,0 +1,21 @@
+#contacts {
+  padding-top: 7.875rem;
+  background-image: url(../../images/vectors/footer.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#contact-form {
+  background: #fff;
+  padding: 6.25rem 5.375rem;
+  padding-bottom: 2.625rem;
+  max-width: 46.75rem;
+  margin-left: auto;
+  box-shadow: 0 40px 60px rgba(#0e77ff, 0.15);
+
+  .form-control {
+    border: none;
+    border-bottom: solid 0.125rem #000;
+    border-radius: 0;
+  }
+}

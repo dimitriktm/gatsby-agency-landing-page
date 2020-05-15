@@ -1,0 +1,12 @@
+@use 'sass:map';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+@import "../../sass/variables";
+#case-studies {
+  padding: 12.5rem 0;
+  background-color: map-get($map: $theme-colors, $key: primary-background);
+  background-image: url(../../images/vectors/plane.svg);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}

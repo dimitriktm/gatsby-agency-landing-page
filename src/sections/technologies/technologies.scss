@@ -1,7 +1,22 @@
+@import "../../sass/variables";
+
+@use "sass:map";
+
+#technologies {
+  padding: 12.5rem 0;
+  position: relative;
+  background-color: map-get($map: $theme-colors, $key: primary-background);
+}
+.tech-triangles-decoration {
+  position: absolute;
+  top: -12.5rem;
+  left: -9rem;
+}
 .tech-heading {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 9.5rem;
 }
 
 .tech-icons-grp {
@@ -11,4 +26,8 @@
   & > * {
     margin: 1rem;
   }
+}
+
+.tech-title {
+  margin-bottom: 2.5rem;
 }

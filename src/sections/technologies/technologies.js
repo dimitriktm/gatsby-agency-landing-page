@@ -2,12 +2,16 @@ import React from "react"
 
 import Container from "react-bootstrap/Container"
 import TechIcon from "../../components/tech-icon"
+import TrianglesComposition from "../../images/vectors/triangles-composition.svg"
 import "./technologies.scss"
 export default () => (
-  <section id="technologies" className="bg-primary-light">
+  <section id="technologies">
+    <div className="tech-triangles-decoration">
+      <img src={TrianglesComposition} alt="" />
+    </div>
     <Container>
-      <div className="tech-heading max-w-50">
-        <h3>Core Technologies</h3>
+      <div className="section-heading-block">
+        <h2 className="section-heading-title">Core Technologies</h2>
         <p>
           Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex
           odio, is the turpis accu msan congue euisque blandit dui Pelle ntesque

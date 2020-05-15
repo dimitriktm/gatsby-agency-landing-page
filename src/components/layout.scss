@@ -1,12 +1,5 @@
 @use "sass:map";
-$theme-colors: (
-  "primary": #0e77ff,
-  "primary-lighter": #16b2ff,
-);
-// $enable-responsive-font-sizes: true;
-$font-family-base: Poppins;
-$font-size-base: 1rem;
-$h2-font-size: $font-size-base * 2.2;
+@import "../sass/variables";
 @import "~bootstrap/scss/bootstrap";
 
 .text-theme-primary-light {
@@ -91,12 +84,7 @@ h2 {
     @extend .mr-2;
   }
 }
-.max-w-50 {
-  max-width: 50.875rem;
-}
-.bg-primary-light {
-  background: rgba(map-get($map: $theme-colors, $key: primary), 0.02);
-}
+
 .icon-square {
   $icon-square-size: 2.5rem;
   border-radius: 0.8rem;
@@ -177,4 +165,79 @@ h2 {
   border: solid 0.125rem #0e77ff;
   border-radius: 0.5rem;
   font-size: 5.75rem;
+}
+
+.section-heading-block {
+  max-width: 50.875rem;
+  margin-bottom: 4rem;
+
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  .section-heading-title {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.theme-items-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.theme-items-col {
+  width: 90%;
+  margin: 2rem 0;
+}
+
+@include media-breakpoint-up(md) {
+  .theme-items-grid {
+    justify-content: center;
+  }
+  .theme-items-col {
+    width: 80%;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .theme-items-grid {
+    justify-content: space-around;
+  }
+  .theme-items-col {
+    width: 45%;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .theme-items-col {
+    width: 30%;
+    max-width: 32.375rem;
+  }
+}
+
+.card {
+  & {
+    border-radius: 0.625rem;
+    border: none;
+  }
+
+  &-body {
+    padding: 2.5rem;
+    padding-bottom: 0;
+    margin-bottom: 1.625rem;
+  }
+  &-footer {
+    padding: 2.5rem;
+    padding-top: 0;
+    background: #fff;
+    border: none;
+  }
+  box-shadow: 0 0 0 rgba(#0e77ff, 0.15);
+  transition: 120ms;
+
+  &:hover {
+    box-shadow: 0 0 40px rgba(#0e77ff, 0.15);
+  }
+
+  &-title {
+    margin-bottom: 1.25rem;
+  }
 }
