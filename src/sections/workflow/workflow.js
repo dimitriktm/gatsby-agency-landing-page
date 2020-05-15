@@ -1,10 +1,11 @@
 import React from "react"
 import Container from "react-bootstrap/Container"
+import CardWithLabel from "../../components/card-with-label"
 import "./workflow.scss"
 export default () => (
   <section id="workflow">
     <Container>
-      <div className="workflow-header">
+      <div className="workflow-header max-w-50">
         <h2>Workflow</h2>
         <p>
           Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex
@@ -13,14 +14,10 @@ export default () => (
         </p>
       </div>
     </Container>
-    <div className="workflow-grid">
+    <di className="workflow-grid">
       <div className="workflow-col">
-        <div className="card-workflow">
-          <div className="card-workflow-body">
-            <div className="btn button-primary-weaker button-rounded-full card-workflow-label">
-              step 1
-            </div>
-            <h3>Send your brief</h3>
+        <CardWithLabel label="step 1" title="Send your brief">
+          <>
             <p>
               Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq
               uam ex odio, is the turpis accu msan congue euisque blandit dui
@@ -31,16 +28,12 @@ export default () => (
               uam ex odio, is the turpis accu msan congue euisque blandit dui
               Pelle ntesque habitant.
             </p>
-          </div>
-        </div>
+          </>
+        </CardWithLabel>
       </div>
       <div className="workflow-col">
-        <div className="card-workflow">
-          <div className="card-workflow-body">
-            <div className="btn button-primary-weaker button-rounded-full card-workflow-label">
-              step 2
-            </div>
-            <h3>Wait for delivery</h3>
+        <CardWithLabel label="step 2" title="Wait for delivery">
+          <>
             <p>
               Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq
               uam ex odio, is the turpis accu msan congue euisque blandit dui
@@ -51,16 +44,12 @@ export default () => (
               uam ex odio, is the turpis accu msan congue euisque blandit dui
               Pelle ntesque habitant.
             </p>
-          </div>
-        </div>
+          </>
+        </CardWithLabel>
       </div>
       <div className="workflow-col">
-        <div className="card-workflow">
-          <div className="card-workflow-body">
-            <div className="btn button-primary-weaker button-rounded-full card-workflow-label">
-              step 3
-            </div>
-            <h3>Get your files!</h3>
+        <CardWithLabel label="step 3" title="Get your files!">
+          <>
             <p>
               Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq
               uam ex odio, is the turpis accu msan congue euisque blandit dui
@@ -71,9 +60,9 @@ export default () => (
               uam ex odio, is the turpis accu msan congue euisque blandit dui
               Pelle ntesque habitant.
             </p>
-          </div>
-        </div>
+          </>
+        </CardWithLabel>
       </div>
-    </div>
+    </di>
   </section>
 )

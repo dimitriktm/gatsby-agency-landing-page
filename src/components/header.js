@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
     <Navbar expand="lg" variant="dark" fixed="top">
       <Container>
         <Navbar.Brand>LOGO</Navbar.Brand>
-        <Nav>
+        <Nav className="d-none d-lg-flex">
           <Nav.Link>
             <Link className="text-white mr-3" to="#about">
               About

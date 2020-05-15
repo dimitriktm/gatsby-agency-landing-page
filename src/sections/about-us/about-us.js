@@ -2,21 +2,23 @@ import React from "react"
 
 import { Link } from "gatsby"
 import Container from "react-bootstrap/Container"
-
+import BtnRoundedFull from "../../components/btn-rounded-full"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 import documentsImage from "../../images/vectors/documents.svg"
 import "./about-us.scss"
 export default () => {
   return (
     <section id="about-us">
       <Container>
-        <div className="row align-items-center justify-content-between">
-          <div className="d-none d-md-block col-7 image-column">
+        <Row className="align-items-center justify-content-between">
+          <Col xs={7} className="d-none d-md-block image-column">
             <img
               src={documentsImage}
               style={{ width: "250%", marginLeft: "-150%" }}
             />
-          </div>
-          <div className="col-12 col-md-5 px-md-0">
+          </Col>
+          <Col xs={12} md={5} className="px-md-0">
             <div className="headings-group-section">
               <h2 className="font-weight-semibold">Great Digital Agency</h2>
               <h3>About us</h3>
@@ -34,14 +36,20 @@ export default () => {
                 aliquam.
               </p>
             </div>
-            <Link
-              to="#"
-              className="btn btn-outline-primary button-rounded-full button-xl"
-            >
-              Get started >>
+            <Link to="#">
+              <BtnRoundedFull as="div" variant="outline-primary">
+                Get started
+                <i class="fas fa-chevron-right fa-xs ml-2"></i>
+                <i
+                  class="fas fa-chevron-right fa-xs"
+                  style={{
+                    marginLeft: "-.25rem",
+                  }}
+                ></i>
+              </BtnRoundedFull>
             </Link>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </Container>
     </section>
   )

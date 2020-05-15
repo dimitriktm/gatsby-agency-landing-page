@@ -1,0 +1,14 @@
+.tech-heading {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tech-icons-grp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  & > * {
+    margin: 1rem;
+  }
+}

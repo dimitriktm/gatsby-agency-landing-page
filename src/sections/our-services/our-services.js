@@ -1,8 +1,12 @@
 import React from "react"
 import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
 import ListGroup from "react-bootstrap/ListGroup"
 import ListGroupItem from "react-bootstrap/ListGroupItem"
+
+import BtnFlat from "../../components/btn-flat"
 
 import ListSvg from "../../images/vectors/list.svg"
 
@@ -11,29 +15,21 @@ export default () => {
   return (
     <div id="our-services">
       <Container>
-        <div className="row align-items-center justify-content-between">
-          <div className="col-12 col-md-5">
+        <Row className="align-items-center justify-content-between">
+          <Col xs={12} md={5}>
             <div className="headings-group-section">
               <h2>Transforming your ideas into Reality</h2>
               <h3>Our services</h3>
             </div>
             <div className="services-btns-group">
-              <button className="btn button-primary-weaker">
-                Web Development
-              </button>
-              <button className="btn button-primary-weaker">
-                Mobile Development
-              </button>
-              <button className="btn button-primary-weaker">
-                UI/UX Designing
-              </button>
-              <button className="btn button-primary-weaker">Branding</button>
-              <button className="btn button-primary-weaker">
-                Cloud Technology
-              </button>
+              <BtnFlat>Web Development</BtnFlat>
+              <BtnFlat>Mobile Development</BtnFlat>
+              <BtnFlat>UI/UX Designing</BtnFlat>
+              <BtnFlat>Branding</BtnFlat>
+              <BtnFlat>Cloud Technology</BtnFlat>
             </div>
-          </div>
-          <div className="col-12 col-md-7 services-right-col">
+          </Col>
+          <Col xs={12} md={7} className="services-right-col">
             <Card className="services-card">
               <Card.Title className="d-flex align-items-center">
                 <img className="mr-4" src={ListSvg} />
@@ -73,8 +69,8 @@ export default () => {
                 </ListGroup>
               </Card.Body>
             </Card>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </Container>
     </div>
   )

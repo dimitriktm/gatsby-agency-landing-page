@@ -9,6 +9,7 @@ import Hero from "../sections/hero"
 import AboutUs from "../sections/about-us"
 import OurServices from "../sections/our-services"
 import Workflow from "../sections/workflow"
+import Technologies from "../sections/technologies"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <AboutUs />
     <OurServices />
     <Workflow />
+    <Technologies />
   </Layout>
 )
 
