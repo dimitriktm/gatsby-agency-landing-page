@@ -1,0 +1,47 @@
+$theme-colors: (
+  "primary": #0e77ff,
+  "primary-lighter": #16b2ff,
+);
+#workflow {
+  padding: 18.5rem 0;
+}
+.workflow-header {
+  max-width: 50.875rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 9.75rem;
+}
+
+.card-workflow {
+  padding: 1.5rem 4.25rem;
+  box-shadow: 0 0 0 0 rgba(map-get($map: $theme-colors, $key: primary), 0.15);
+  // border: solid 1px #000;
+  transition: 320ms;
+}
+.card-workflow:hover {
+  box-shadow: 0 1.875rem 3.75rem 0px
+    rgba(map-get($map: $theme-colors, $key: primary), 0.15);
+}
+.card-workflow-body {
+  position: relative;
+  top: -3rem;
+}
+
+.card-workflow:hover .card-workflow-label {
+  background: map-get($map: $theme-colors, $key: primary);
+  color: #fff;
+}
+.card-workflow-label {
+  padding: 0.5rem 2rem;
+  margin-bottom: 1.75rem;
+  transition: 320ms;
+}
+
+.workflow-grid {
+  display: flex;
+  justify-content: center;
+}
+.workflow-col {
+  width: 27%;
+}

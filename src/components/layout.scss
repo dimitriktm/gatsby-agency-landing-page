@@ -1,10 +1,11 @@
 @use "sass:map";
 $theme-colors: (
   "primary": #0e77ff,
+  "primary-lighter": #16b2ff,
 );
-$enable-responsive-font-sizes: true;
+// $enable-responsive-font-sizes: true;
 $font-family-base: Poppins;
-$font-size-base: 1.125rem;
+$font-size-base: 1rem;
 $h2-font-size: $font-size-base * 2.2;
 @import "~bootstrap/scss/bootstrap";
 
@@ -38,6 +39,14 @@ h5,
 h6 {
   font-weight: 600;
 }
+h2 {
+  margin-bottom: 1.25rem;
+}
+.btn {
+  border-radius: 1rem;
+  padding: 1rem 1.75rem;
+  font-size: 1.25rem;
+}
 .button-rounded-full {
   border-radius: 5000px;
 }
@@ -52,12 +61,17 @@ h6 {
 .container {
   max-width: 85rem;
 }
+.list-group-item {
+  border: none;
+}
 
 .headings-group-section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2.25rem;
   h2 {
     order: 2;
+    margin-bottom: 0;
   }
   h3 {
     order: 1;
@@ -65,5 +79,41 @@ h6 {
     @extend .text-primary;
     @extend .mb-0;
     @extend .text-uppercase;
+    display: inline-flex;
+    align-items: center;
+  }
+  h3:before {
+    content: "";
+    width: 2.375rem;
+    height: 2.875rem;
+    background-image: url("../images/vectors/arrow.svg");
+    display: inline-block;
+    @extend .mr-2;
+  }
+}
+
+.icon-square {
+  $icon-square-size: 2.5rem;
+  border-radius: 0.8rem;
+  width: $icon-square-size;
+  height: $icon-square-size;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-square-success {
+  background: rgba(#4bffa5, 0.15);
+  color: #4bffa5;
+  font-size: 1.375rem;
+}
+.button-primary-weaker {
+  background-color: rgba(
+    map-get($map: $theme-colors, $key: primary-lighter),
+    0.09
+  );
+  color: map-get($map: $theme-colors, $key: primary);
+  &:hover {
+    background-color: rgba(map-get($map: $theme-colors, $key: primary), 1);
+    color: $white;
   }
 }

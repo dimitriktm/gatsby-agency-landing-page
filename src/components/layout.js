@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import CDN from "./CDN"
 import Header from "./header"
 import "./layout.scss"
 
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <CDN />
       <div>
         <main>{children}</main>
         <footer></footer>
