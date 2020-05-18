@@ -5,16 +5,29 @@
 
 .case-studies {
     position: relative;
-    padding: 12.5rem 0;
     background-color: rgba(theme-color(primary), 0.02);
     background-image: url(../../images/vectors/plane.svg);
     background-position: 50% 100%;
     background-repeat: no-repeat;
-}
+    padding: 8rem 0;
 
+    @include media-breakpoint-up(lg) {
+        padding: 12.5rem 0;
+    }
+}
 .case-studies-decoration-pattern {
     position: absolute;
     top: -15rem;
     right: -15rem;
     transform: rotate(90deg);
+    z-index: 10;
+    max-width: 36.25rem;
+    width: 70%;
+    img {
+        width: 100%;
+    }
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: inline-block;
+    }
 }

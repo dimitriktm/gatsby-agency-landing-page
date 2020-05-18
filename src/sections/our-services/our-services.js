@@ -14,10 +14,10 @@ import ListSvg from "../../images/vectors/list.svg"
 import "./our-services.scss"
 export default () => {
     return (
-        <div id="our-services">
-            <Container>
-                <Row className="align-items-center justify-content-between">
-                    <Col xs={12} md={5}>
+        <section id="our-services">
+            <Container className="services-container">
+                <Row className="justify-content-between">
+                    <Col xs={12} md={5} className="mt-lg-5 mb-5 mb-md-0">
                         <HeadingsGroup
                             title_primary="Our services"
                             title_secondary="Transforming your ideas into Reality"
@@ -33,7 +33,10 @@ export default () => {
                     <Col xs={12} md={7} className="services-right-col">
                         <Card className="services-card">
                             <Card.Title className="d-flex align-items-center">
-                                <img className="mr-4" src={ListSvg} />
+                                <img
+                                    className="services-card-icon mr-4"
+                                    src={ListSvg}
+                                />
                                 <h4 className="h2 font-weight-semibold">
                                     UI/UX Designing
                                 </h4>
@@ -47,26 +50,26 @@ export default () => {
                                 </p>
                                 <ListGroup>
                                     <ListGroupItem>
-                                        <div className="icon-square icon-square-success mr-3">
+                                        <div className="services-card-checkmark mr-3">
                                             <i className="fas fa-check"></i>
                                         </div>
                                         Lorem ipsum dolor sit amet, conse ctetur
                                         adipi scing elit.
                                     </ListGroupItem>
                                     <ListGroupItem>
-                                        <div className="icon-square icon-square-success mr-3">
+                                        <div className="services-card-checkmark mr-3">
                                             <i className="fas fa-check"></i>
                                         </div>
                                         Lorem ipsum dolor sit amet,
                                     </ListGroupItem>
                                     <ListGroupItem>
-                                        <div className="icon-square icon-square-success mr-3">
+                                        <div className="services-card-checkmark mr-3">
                                             <i className="fas fa-check"></i>
                                         </div>
                                         conse ctetur adipi scing elit.
                                     </ListGroupItem>
                                     <ListGroupItem>
-                                        <div className="icon-square icon-square-success mr-3">
+                                        <div className="services-card-checkmark mr-3">
                                             <i className="fas fa-check"></i>
                                         </div>
                                         Lorem ipsum dolor sit amet, conse ctetur
@@ -77,6 +80,6 @@ export default () => {
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </section>
     )
 }

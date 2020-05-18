@@ -7,11 +7,17 @@
     align-items: center;
     justify-content: center;
 
-    width: 8.75rem;
-    height: 8.75rem;
+    width: 6rem;
+    height: 6rem;
     background: theme-color("white");
     color: theme-color(primary);
     border: solid 0.125rem theme-color(primary);
     border-radius: 0.5rem;
-    font-size: 5.75rem;
+    font-size: 3.5rem;
+
+    @include media-breakpoint-up(sm) {
+        width: 8.75rem;
+        height: 8.75rem;
+        font-size: 5.75rem;
+    }
 }

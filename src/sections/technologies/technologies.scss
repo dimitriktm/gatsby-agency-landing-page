@@ -3,15 +3,28 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins/_breakpoints";
 
-#technologies {
-    padding: 12.5rem 0;
+.technologies {
+    padding: 8rem 0;
     position: relative;
     background-color: rgba(theme-color(primary), 0.02);
+    @include media-breakpoint-up(lg) {
+        padding: 12.5rem 0;
+    }
 }
 .tech-triangles-decoration {
     position: absolute;
-    top: -12.5rem;
-    left: -9rem;
+    top: calc(0% - 15.5rem);
+    left: calc(0% - 15rem);
+    max-width: 45.125rem;
+    width: 70%;
+
+    img {
+        width: 100%;
+    }
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: inline-block;
+    }
 }
 .tech-heading {
     text-align: center;

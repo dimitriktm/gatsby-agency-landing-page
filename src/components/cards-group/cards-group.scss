@@ -1,0 +1,36 @@
+@import "../../sass/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+.cards-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cards-group-item {
+    width: 90%;
+    margin: 2rem 0;
+    max-width: 32.375rem;
+}
+
+@include media-breakpoint-up(md) {
+    .card-group {
+        justify-content: center;
+    }
+    .cards-group-item {
+        width: 80%;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .card-group {
+        justify-content: space-around;
+    }
+    .cards-group-item {
+        width: 45%;
+    }
+}
+@include media-breakpoint-up(xl) {
+    .cards-group-item {
+        width: 30%;
+    }
+}

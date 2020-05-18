@@ -9,7 +9,7 @@ import "./hero.scss"
 export default () => {
     return (
         <section
-            id="hero"
+            className="hero"
             style={{
                 backgroundImage: `url(${HeroBackground})`,
             }}
@@ -27,7 +27,7 @@ export default () => {
                         Our products are fully custom-made, built with the
                         latest technologies and cloud-architectures.{" "}
                     </p>
-                    <Link to="#todo">
+                    <Link to="#about-us">
                         <BtnRounded as="div" variant="light">
                             Get started
                         </BtnRounded>

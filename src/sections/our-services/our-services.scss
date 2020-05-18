@@ -16,6 +16,7 @@
     }
     padding: 9.25rem 0;
 }
+
 .services-right-col {
     @include media-breakpoint-up(md) {
         margin-right: -5vw;
@@ -27,8 +28,8 @@
     padding: 2.25rem 3.625rem 5.25rem 3.625rem;
     box-shadow: 0 1.875rem 3.75rem 0px rgba(theme-color(primary), 0.15);
     @include media-breakpoint-up(md) {
-        min-width: 128%;
-        padding-right: 30%;
+        min-width: 130%;
+        padding-right: 40%;
     }
 }
 
@@ -58,4 +59,20 @@
 .services-btns-group > * {
     margin-right: 0.8rem !important;
     margin-bottom: 1.125rem !important;
+}
+
+.services-card-icon {
+    width: 6rem;
+}
+.services-card-checkmark {
+    $icon-square-size: 2.5rem;
+    border-radius: 0.8rem;
+    width: $icon-square-size;
+    height: $icon-square-size;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(#4bffa5, 0.15);
+    color: #4bffa5;
+    font-size: 1.375rem;
 }

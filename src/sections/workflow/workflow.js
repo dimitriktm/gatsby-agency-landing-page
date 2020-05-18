@@ -2,9 +2,10 @@ import React from "react"
 import Container from "react-bootstrap/Container"
 import CardWithLabel from "../../components/card-with-label/card-with-label"
 import HeaderContentBlock from "../../components/header-content-block"
+import CardsGroup from "../../components/cards-group"
 import "./workflow.scss"
 export default () => (
-    <section id="workflow">
+    <section className="workflow" id="workflow">
         <Container>
             <HeaderContentBlock
                 title="Workflow"
@@ -14,8 +15,8 @@ export default () => (
                 className="workflow-header"
             />
         </Container>
-        <div className="theme-items-grid">
-            <div className="theme-items-col">
+        <CardsGroup
+            cards={[
                 <CardWithLabel label="step 1" title="Send your brief">
                     <>
                         <p>
@@ -29,9 +30,7 @@ export default () => (
                             congue euisque blandit dui Pelle ntesque habitant.
                         </p>
                     </>
-                </CardWithLabel>
-            </div>
-            <div className="theme-items-col">
+                </CardWithLabel>,
                 <CardWithLabel label="step 2" title="Wait for delivery">
                     <>
                         <p>
@@ -45,9 +44,7 @@ export default () => (
                             congue euisque blandit dui Pelle ntesque habitant.
                         </p>
                     </>
-                </CardWithLabel>
-            </div>
-            <div className="theme-items-col">
+                </CardWithLabel>,
                 <CardWithLabel label="step 3" title="Get your files!">
                     <>
                         <p>
@@ -61,8 +58,8 @@ export default () => (
                             congue euisque blandit dui Pelle ntesque habitant.
                         </p>
                     </>
-                </CardWithLabel>
-            </div>
-        </div>
+                </CardWithLabel>,
+            ]}
+        />
     </section>
 )

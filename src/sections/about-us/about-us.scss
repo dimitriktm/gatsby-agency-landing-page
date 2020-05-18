@@ -2,20 +2,24 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins/_breakpoints";
-#about-us {
-    @include media-breakpoint-up(md) {
-        // background-image: url("../../images/vectors/triangles-composition-2.svg");
-        // background-repeat: no-repeat;
-        // background-position: calc(100% + 12rem) 0;
+.about-us {
+    padding: 5rem 0px;
+
+    @include media-breakpoint-up(lg) {
+        padding: 10rem 0rem;
     }
     @include media-breakpoint-up(lg) {
+        background-image: url("../../images/vectors/triangles-composition-2.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% + 12rem) 0;
+    }
+    @include media-breakpoint-up(xl) {
         background: url("../../images/vectors/triangles-composition-2.svg")
-                calc(100% + 6rem) 0 no-repeat,
-            url("../../images/vectors/pattern.svg") calc(100% + 15rem) 100%
+                calc(100% + 6rem) 5% no-repeat,
+            url("../../images/vectors/pattern.svg") calc(100% + 15rem) 95%
                 no-repeat;
     }
-    .text-block {
-        margin: 2.5rem 0;
-    }
-    padding: 10rem 0;
+}
+.about-us-text-block {
+    margin: 2.5rem 0;
 }

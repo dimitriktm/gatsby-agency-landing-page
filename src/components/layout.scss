@@ -2,8 +2,14 @@
 @import "../sass/variables";
 @import "~bootstrap/scss/bootstrap";
 html {
+    @media (max-width: 1280px) {
+        font-size: 90%;
+    }
     @media (max-width: 720px) {
-        // font-size: 75%;
+        font-size: 80%;
+    }
+    @media (max-width: 320px) {
+        font-size: 65%;
     }
 }
 * {
@@ -20,6 +26,11 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+}
+section {
+    width: 100%;
     overflow-x: hidden;
 }
 h1 {
@@ -53,6 +64,10 @@ a {
 }
 .rounded-full {
     border-radius: 5000px !important;
+}
+.zindex-content {
+    position: relative;
+    z-index: 20;
 }
 /**
 ----------------------
@@ -88,52 +103,4 @@ a {
 }
 .text-2xl {
     font-size: $font-size-2xl;
-}
-
-.icon-square {
-    $icon-square-size: 2.5rem;
-    border-radius: 0.8rem;
-    width: $icon-square-size;
-    height: $icon-square-size;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.icon-square-success {
-    background: rgba(#4bffa5, 0.15);
-    color: #4bffa5;
-    font-size: 1.375rem;
-}
-
-.theme-items-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.theme-items-col {
-    width: 90%;
-    margin: 2rem 0;
-}
-
-@include media-breakpoint-up(md) {
-    .theme-items-grid {
-        justify-content: center;
-    }
-    .theme-items-col {
-        width: 80%;
-    }
-}
-@include media-breakpoint-up(lg) {
-    .theme-items-grid {
-        justify-content: space-around;
-    }
-    .theme-items-col {
-        width: 45%;
-    }
-}
-@include media-breakpoint-up(xl) {
-    .theme-items-col {
-        width: 30%;
-        max-width: 32.375rem;
-    }
 }

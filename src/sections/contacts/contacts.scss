@@ -5,31 +5,50 @@
 
 .contacts {
     position: relative;
-    padding-top: 7.875rem;
-    background: url(../../images/vectors/footer.svg) left 103% / 50% no-repeat,
-        linear-gradient(
-            135deg,
-            rgba(theme-color("white"), 1) 80%,
-            rgba(theme-color(primary), 1) 80%,
-            rgba(theme-color(primary), 1) 100%
-        );
+    padding-top: 0rem;
+
+    @include media-breakpoint-up(md) {
+        background: url(../../images/vectors/footer.svg) left 103% / 50%
+                no-repeat,
+            linear-gradient(
+                135deg,
+                rgba(theme-color("white"), 1) 80%,
+                rgba(theme-color(primary), 1) 80%,
+                rgba(theme-color(primary), 1) 100%
+            );
+    }
 }
 .contacts-decoration-triangle {
     position: absolute;
     top: -3rem;
     left: 17%;
     z-index: 0;
+    width: 8rem;
+    img {
+        width: 100%;
+    }
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: inline-block;
+    }
 }
 
 .contact-form {
     background: theme-color("white");
-    padding: 6.25rem 5.375rem;
     padding-bottom: 2.625rem;
-    max-width: 46.75rem;
+
     margin-left: auto;
     box-shadow: 0 40px 60px rgba(theme-color(primary), 0.15);
     position: relative;
     bottom: -5rem;
+    padding: 6.25rem 2.375rem;
+
+    @include media-breakpoint-up(sm) {
+        padding: 6.25rem 5.375rem;
+    }
+    @include media-breakpoint-up(md) {
+        max-width: 46.75rem;
+    }
     .contact-form-title {
         margin-bottom: 2.875rem;
     }

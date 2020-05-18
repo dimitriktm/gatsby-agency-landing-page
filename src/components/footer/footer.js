@@ -17,7 +17,7 @@ export default () => (
                 </Col>
                 <Col xs="12" lg="9" xl="8">
                     <Row className="justify-content-center justify-content-lg-between flex-wrap">
-                        <Col xs="12" md="4" className="mb-5 mg-lg-0">
+                        <Col xs="12" sm="4" md="4" className="mb-5 mg-lg-0">
                             <h5>Our services</h5>
                             <div className="line"></div>
                             <ul>
@@ -35,7 +35,7 @@ export default () => (
                                 </li>
                             </ul>
                         </Col>
-                        <Col xs="12" md="4" className="mb-5 mb-lg-0">
+                        <Col xs="12" sm="4" md="4" className="mb-5 mb-lg-0">
                             <h5>Our links</h5>
                             <div className="line"></div>
 
@@ -54,7 +54,7 @@ export default () => (
                                 </li>
                             </ul>
                         </Col>
-                        <Col xs="12" md="4" className="mb-5 mb-lg-0">
+                        <Col xs="12" sm="8" md="4" className="mb-5 mb-lg-0">
                             <h5>Contact Us</h5>
                             <div className="line"></div>
                             <ul>
