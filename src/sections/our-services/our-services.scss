@@ -16,23 +16,7 @@
     }
 }
 
-.services-right-col {
-    @include media-breakpoint-up(md) {
-        margin-right: -5vw;
-        margin-left: 5vw;
-    }
-}
-.services-card {
-    border: none;
-    padding: 2.25rem 3.625rem 5.25rem 3.625rem;
-    box-shadow: 0 1.875rem 3.75rem 0px rgba(theme-color(primary), 0.15);
-    @include media-breakpoint-up(md) {
-        min-width: 130%;
-        padding-right: 40%;
-    }
-}
-
-#our-services {
+.our-services {
     .card-title {
         margin-bottom: 2.5rem;
     }
@@ -65,6 +49,22 @@
     margin-bottom: 1.125rem !important;
 }
 
+.services-right-col {
+    @include media-breakpoint-up(md) {
+        margin-right: -5vw;
+        margin-left: 5vw;
+    }
+}
+
+.services-card {
+    border: none;
+    padding: 2.25rem 3.625rem 5.25rem 3.625rem;
+    box-shadow: 0 1.875rem 3.75rem 0px rgba(theme-color(primary), 0.15);
+    @include media-breakpoint-up(md) {
+        min-width: 130%;
+        padding-right: 40%;
+    }
+}
 .services-card-icon {
     width: 6rem;
 }

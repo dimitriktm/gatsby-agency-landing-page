@@ -35,26 +35,28 @@
 
 .contact-form {
     background: theme-color("white");
-    padding-bottom: 2.625rem;
 
     margin-left: auto;
     box-shadow: 0 40px 60px rgba(theme-color(primary), 0.15);
     position: relative;
     bottom: -5rem;
     padding: 6.25rem 2.375rem;
-
+    padding-bottom: 2.625rem;
     @include media-breakpoint-up(sm) {
         padding: 6.25rem 5.375rem;
     }
     @include media-breakpoint-up(md) {
         max-width: 46.75rem;
     }
+
     .contact-form-title {
         margin-bottom: 2.875rem;
     }
+
     .form-group {
         margin-bottom: 2.875rem;
     }
+
     .form-control {
         border: none;
         border-bottom: solid 0.125rem theme-color(dark);
@@ -66,6 +68,20 @@
     .form-control:active {
         outline: none !important;
         border-color: theme-color(primary);
+    }
+    .form-control {
+        &-valid {
+            border-color: theme-color(success) !important;
+        }
+        &-invalid {
+            border-color: theme-color(danger) !important;
+        }
+        &-valid-checkbox {
+            color: theme-color(success) !important;
+        }
+        &-invalid-checkbox {
+            color: theme-color(dagner) !important;
+        }
     }
 
     &-checkbox {
@@ -80,20 +96,5 @@
             margin-left: 1rem;
             display: flex;
         }
-    }
-}
-
-.form-control {
-    &-valid {
-        border-color: theme-color(success) !important;
-    }
-    &-invalid {
-        border-color: theme-color(danger) !important;
-    }
-    &-valid-checkbox {
-        color: theme-color(success) !important;
-    }
-    &-invalid-checkbox {
-        color: theme-color(dagner) !important;
     }
 }
