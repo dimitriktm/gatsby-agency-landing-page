@@ -1,0 +1,29 @@
+@import "../../sass/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+
+.headings-group-section {
+    margin-bottom: 2.25rem;
+    h2 {
+        margin-bottom: 0;
+        display: inline-flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: theme-color(primary);
+        font-size: $h4-font-size;
+    }
+    /** icon */
+    h2:before {
+        content: "";
+        width: 2.375rem;
+        height: 2.875rem;
+        background-image: url("../../images/vectors/arrow.svg");
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+    h3 {
+        margin-bottom: 0;
+        font-size: $h2-font-size;
+    }
+}

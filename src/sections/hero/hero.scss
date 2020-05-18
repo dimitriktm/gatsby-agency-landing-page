@@ -1,20 +1,21 @@
-#hero {
-  width: 100%;
-  min-height: 100vh;
-  background-position: 30%;
-  background-size: auto;
-  background-repeat: no-repeat;
+@import "../../sass/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
 
-  display: flex;
-  align-items: center;
+#hero {
+    width: 100%;
+    min-height: 100vh;
+    background-position: 30%;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
 }
 #hero .container {
-  margin-bottom: 8rem;
+    margin-bottom: 8rem;
 }
-
 .hero-content {
-  max-width: 50rem;
-}
-.hero-subtitle {
-  padding-right: 6rem;
+    max-width: 50rem;
 }

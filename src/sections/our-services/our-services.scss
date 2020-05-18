@@ -1,63 +1,61 @@
-@use 'sass:map';
+@import "../../sass/variables";
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins/_breakpoints";
-@import "../../sass/variables";
 
 #our-services {
-  background: map-get($map: $theme-colors, $key: primary-background);
+    background: rgba(theme-color(primary), 0.02);
 
-  @include media-breakpoint-up(md) {
-    background: linear-gradient(
-      to right,
-      map-get($map: $theme-colors, $key: primary-background) 70%,
-      rgba(map-get($map: $theme-colors, $key: primary), 1) 70%,
-      rgba(map-get($map: $theme-colors, $key: primary), 1) 100%
-    );
-  }
-  padding: 9.25rem 0;
+    @include media-breakpoint-up(md) {
+        background: linear-gradient(
+            to right,
+            rgba(theme-color(primary), 0.02) 70%,
+            rgba(theme-color(primary), 1) 70%,
+            rgba(theme-color(primary), 1) 100%
+        );
+    }
+    padding: 9.25rem 0;
 }
 .services-right-col {
-  @include media-breakpoint-up(md) {
-    margin-right: -5vw;
-    margin-left: 5vw;
-  }
+    @include media-breakpoint-up(md) {
+        margin-right: -5vw;
+        margin-left: 5vw;
+    }
 }
 .services-card {
-  border: none;
-  padding: 2.25rem 3.625rem 5.25rem 3.625rem;
-  box-shadow: 0 1.875rem 3.75rem 0px
-    rgba(map-get($map: $theme-colors, $key: primary), 0.15);
-  @include media-breakpoint-up(md) {
-    min-width: 128%;
-    padding-right: 30%;
-  }
+    border: none;
+    padding: 2.25rem 3.625rem 5.25rem 3.625rem;
+    box-shadow: 0 1.875rem 3.75rem 0px rgba(theme-color(primary), 0.15);
+    @include media-breakpoint-up(md) {
+        min-width: 128%;
+        padding-right: 30%;
+    }
 }
 
-#out-services {
-  .card-title {
-    margin-bottom: 2.5rem;
-  }
-  .services-card-body-text {
-    margin-bottom: 2.5rem;
-  }
-  .list-group-item,
-  .card-body {
-    padding: 0;
-  }
-  .list-group-item {
-    padding-bottom: 1rem;
-  }
-  .list-group-item:last-child {
-    padding: 0;
-  }
+#our-services {
+    .card-title {
+        margin-bottom: 2.5rem;
+    }
+    .services-card-body-text {
+        margin-bottom: 2.5rem;
+    }
+    .list-group-item,
+    .card-body {
+        padding: 0;
+    }
+    .list-group-item {
+        padding-bottom: 1rem;
+    }
+    .list-group-item:last-child {
+        padding: 0;
+    }
 
-  .services-btns-group {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .services-btns-group > * {
-    margin-right: 0.8rem;
-    margin-bottom: 1.125rem;
-  }
+    .services-btns-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.services-btns-group > * {
+    margin-right: 0.8rem !important;
+    margin-bottom: 1.125rem !important;
 }

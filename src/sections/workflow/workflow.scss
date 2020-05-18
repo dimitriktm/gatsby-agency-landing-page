@@ -2,41 +2,41 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins/_breakpoints";
 #workflow {
-  padding: 18.5rem 0;
+    padding: 18.5rem 0;
 }
 .workflow-header {
-  margin-bottom: 9.75rem;
+    margin-bottom: 9.75rem;
 }
 
 .workflow-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .workflow-col {
-  width: 90%;
-  margin: 2rem 0;
+    width: 90%;
+    margin: 2rem 0;
 }
 
 @include media-breakpoint-up(md) {
-  .workflow-grid {
-    justify-content: center;
-  }
-  .workflow-col {
-    width: 80%;
-  }
+    .workflow-grid {
+        justify-content: center;
+    }
+    .workflow-col {
+        width: 80%;
+    }
 }
 @include media-breakpoint-up(lg) {
-  .workflow-grid {
-    justify-content: space-around;
-  }
-  .workflow-col {
-    width: 45%;
-  }
+    .workflow-grid {
+        justify-content: space-around;
+    }
+    .workflow-col {
+        width: 45%;
+    }
 }
 @include media-breakpoint-up(xl) {
-  .workflow-col {
-    width: 30%;
-    max-width: 32.375rem;
-  }
+    .workflow-col {
+        width: 30%;
+        max-width: 32.375rem;
+    }
 }

@@ -6,49 +6,52 @@ import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import Container from "react-bootstrap/Container"
 const Header = ({ siteTitle }) => (
-  <header>
-    <Navbar expand="lg" variant="dark" fixed="top">
-      <Container>
-        <Navbar.Brand>LOGO</Navbar.Brand>
-        <Nav className="d-none d-lg-flex">
-          <Nav.Link>
-            <Link className="text-white mr-3" to="#about">
-              About
-            </Link>
-          </Nav.Link>
-          <Nav.Link>
-            <Link className="text-white mr-3" to="#services">
-              Services
-            </Link>
-          </Nav.Link>
+    <header>
+        <Navbar expand="lg" variant="dark" fixed="top">
+            <Container>
+                <Navbar.Brand>LOGO</Navbar.Brand>
+                <Nav className="d-none d-lg-flex">
+                    <Link
+                        className="text-white mr-3 nav-link"
+                        role="button"
+                        to="#about"
+                    >
+                        About
+                    </Link>
+                    <Link
+                        className="text-white mr-3 nav-link"
+                        role="button"
+                        to="#services"
+                    >
+                        Services
+                    </Link>
 
-          <Nav.Link>
-            <Link className="text-white  mr-3" to="#case-studies">
-              Case studies
-            </Link>
-          </Nav.Link>
-          <Nav.Link>
-            <Link className="text-white mr-3" to="#testimonials">
-              Testimonials
-            </Link>
-          </Nav.Link>
-          <Nav.Link>
-            <Link className="text-white" to="#contact">
-              Contact
-            </Link>
-          </Nav.Link>
-        </Nav>
-      </Container>
-    </Navbar>
-  </header>
+                    <Link
+                        className="text-white  mr-3 nav-link"
+                        role="button"
+                        to="#case-studies"
+                    >
+                        Case studies
+                    </Link>
+                    <Link
+                        className="text-white nav-link"
+                        role="button"
+                        to="#contact"
+                    >
+                        Contact
+                    </Link>
+                </Nav>
+            </Container>
+        </Navbar>
+    </header>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+    siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+    siteTitle: ``,
 }
 
 export default Header

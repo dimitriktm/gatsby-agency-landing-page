@@ -1,28 +1,29 @@
 @use "sass:map";
 @import "../sass/variables";
 @import "~bootstrap/scss/bootstrap";
-
-.text-theme-primary-light {
-  color: #9abfff;
+html {
+    @media (max-width: 720px) {
+        // font-size: 75%;
+    }
 }
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 h1 {
-  line-height: 1.1;
+    line-height: 1.1;
 }
 h1,
 h2,
@@ -30,234 +31,109 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+    font-weight: 600;
 }
 h2 {
-  margin-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
 }
+a {
+    font-size: $font-size-lg;
+}
+.lead {
+    font-weight: 300;
+    line-height: 2;
+}
+/**
+----------------------
+ Utils
+----------------------
+*/
+.font-weight-semibold {
+    font-weight: 600;
+}
+.rounded-full {
+    border-radius: 5000px !important;
+}
+/**
+----------------------
+ Overrides
+----------------------
+*/
 .btn {
-  border-radius: 1rem;
-  padding: 1rem 1.75rem;
-  font-size: 1.25rem;
+    border-radius: 1rem;
+    padding: 1rem 1.75rem;
 }
-.button-rounded-full {
-  border-radius: 5000px;
+.btn-lg {
+    padding: 1.25rem 2.5rem;
+    line-height: 1;
+    border-width: 0.125rem;
 }
-.button-xl {
-  font-size: 1.56rem;
-  // font-size: $h4-font-size;
-  padding: 1.25rem 2.5rem;
-  line-height: 1;
-  border-width: 0.125rem;
-}
-
 .container {
-  max-width: 85rem;
+    max-width: 85rem;
 }
 .list-group-item {
-  border: none;
+    border: none;
 }
 
-.headings-group-section {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2.25rem;
-  h2 {
-    order: 2;
-    margin-bottom: 0;
-  }
-  h3 {
-    order: 1;
-
-    @extend .text-primary;
-    @extend .mb-0;
-    @extend .text-uppercase;
-    display: inline-flex;
-    align-items: center;
-  }
-  h3:before {
-    content: "";
-    width: 2.375rem;
-    height: 2.875rem;
-    background-image: url("../images/vectors/arrow.svg");
-    display: inline-block;
-    @extend .mr-2;
-  }
+/**
+----------------------
+ Custom classes
+----------------------
+*/
+.text-lg {
+    font-size: $font-size-lg;
+}
+.text-xl {
+    font-size: $font-size-xl;
+}
+.text-2xl {
+    font-size: $font-size-2xl;
 }
 
 .icon-square {
-  $icon-square-size: 2.5rem;
-  border-radius: 0.8rem;
-  width: $icon-square-size;
-  height: $icon-square-size;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    $icon-square-size: 2.5rem;
+    border-radius: 0.8rem;
+    width: $icon-square-size;
+    height: $icon-square-size;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .icon-square-success {
-  background: rgba(#4bffa5, 0.15);
-  color: #4bffa5;
-  font-size: 1.375rem;
-}
-.button-primary-flat {
-  & {
-    background-color: rgba(
-      map-get($map: $theme-colors, $key: primary-lighter),
-      0.09
-    );
-    color: map-get($map: $theme-colors, $key: primary);
-    border: none;
-  }
-  &:hover {
-    background-color: rgba(map-get($map: $theme-colors, $key: primary), 1);
-    color: $white;
-  }
-}
-
-.card-with-label {
-  & {
-    padding: 1.5rem 4.25rem;
-    box-shadow: 0 0 0 0 rgba(map-get($map: $theme-colors, $key: primary), 0.15);
-    // border: solid 1px #000;
-    transition: 320ms;
-  }
-  &:hover {
-    box-shadow: 0 1.875rem 3.75rem 0px
-      rgba(map-get($map: $theme-colors, $key: primary), 0.15);
-  }
-  &:hover &-label {
-    background: map-get($map: $theme-colors, $key: primary);
-    color: #fff;
-  }
-  &-body {
-    position: relative;
-    top: -3rem;
-  }
-  &-body > p {
-    @extend .mb-2;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &-label {
-    padding: 0.5rem 2rem;
-    margin-bottom: 1.75rem;
-    transition: 320ms;
-  }
-  &-line {
-    width: 10.5rem;
-    height: 0.375rem;
-    background-color: map-get($map: $theme-colors, $key: primary);
-    margin-bottom: 1.25rem;
-  }
-}
-
-.tech-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 8.75rem;
-  height: 8.75rem;
-  background: #fff;
-  color: #0e77ff;
-  border: solid 0.125rem #0e77ff;
-  border-radius: 0.5rem;
-  font-size: 5.75rem;
-}
-
-.section-heading-block {
-  max-width: 50.875rem;
-  margin-bottom: 4rem;
-
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-
-  .section-heading-title {
-    margin-bottom: 1.25rem;
-  }
+    background: rgba(#4bffa5, 0.15);
+    color: #4bffa5;
+    font-size: 1.375rem;
 }
 
 .theme-items-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .theme-items-col {
-  width: 90%;
-  margin: 2rem 0;
+    width: 90%;
+    margin: 2rem 0;
 }
 
 @include media-breakpoint-up(md) {
-  .theme-items-grid {
-    justify-content: center;
-  }
-  .theme-items-col {
-    width: 80%;
-  }
+    .theme-items-grid {
+        justify-content: center;
+    }
+    .theme-items-col {
+        width: 80%;
+    }
 }
 @include media-breakpoint-up(lg) {
-  .theme-items-grid {
-    justify-content: space-around;
-  }
-  .theme-items-col {
-    width: 45%;
-  }
+    .theme-items-grid {
+        justify-content: space-around;
+    }
+    .theme-items-col {
+        width: 45%;
+    }
 }
 @include media-breakpoint-up(xl) {
-  .theme-items-col {
-    width: 30%;
-    max-width: 32.375rem;
-  }
-}
-
-.card {
-  & {
-    border-radius: 0.625rem;
-    border: none;
-  }
-
-  &-body {
-    padding: 2.5rem;
-    padding-bottom: 0;
-    margin-bottom: 1.625rem;
-  }
-  &-footer {
-    padding: 2.5rem;
-    padding-top: 0;
-    background: #fff;
-    border: none;
-  }
-  box-shadow: 0 0 0 rgba(#0e77ff, 0.15);
-  transition: 120ms;
-
-  &:hover {
-    box-shadow: 0 0 40px rgba(#0e77ff, 0.15);
-  }
-
-  &-title {
-    margin-bottom: 1.25rem;
-  }
-}
-
-footer {
-  background-color: map-get($map: $theme-colors, $key: primary);
-  display: flex;
-  justify-content: space-around;
-  padding-top: 7.875rem;
-  padding-bottom: 3.75rem;
-  * {
-    color: #fff !important;
-  }
-  ul {
-    list-style: none;
-  }
-  .line {
-    margin: 0.75rem 0;
-    background: #21b3ff;
-    width: 3rem;
-    height: 0.25rem;
-  }
+    .theme-items-col {
+        width: 30%;
+        max-width: 32.375rem;
+    }
 }

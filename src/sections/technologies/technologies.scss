@@ -1,33 +1,34 @@
 @import "../../sass/variables";
-
-@use "sass:map";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
 
 #technologies {
-  padding: 12.5rem 0;
-  position: relative;
-  background-color: map-get($map: $theme-colors, $key: primary-background);
+    padding: 12.5rem 0;
+    position: relative;
+    background-color: rgba(theme-color(primary), 0.02);
 }
 .tech-triangles-decoration {
-  position: absolute;
-  top: -12.5rem;
-  left: -9rem;
+    position: absolute;
+    top: -12.5rem;
+    left: -9rem;
 }
 .tech-heading {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 9.5rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 9.5rem;
 }
 
 .tech-icons-grp {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  & > * {
-    margin: 1rem;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & > * {
+        margin: 1rem;
+    }
 }
 
 .tech-title {
-  margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
 }

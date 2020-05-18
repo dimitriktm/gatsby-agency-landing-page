@@ -1,0 +1,40 @@
+@import "../../sass/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+.card-with-label {
+    & {
+        padding: 1.5rem 4.25rem;
+        box-shadow: 0 0 0 0 rgba(theme-color(primary), 0.15);
+        transition: 320ms;
+    }
+    &:hover {
+        box-shadow: 0 1.875rem 3.75rem 0px rgba(theme-color(primary), 0.15);
+    }
+    &:hover &-label {
+        background: theme-color(primary);
+        color: theme-color("white");
+    }
+    &-content {
+        position: relative;
+        top: -3rem;
+    }
+    &-body > p {
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-label {
+        padding: 0.5rem 2rem;
+        margin-bottom: 1.75rem;
+        transition: 320ms;
+    }
+    &-line {
+        width: 10.5rem;
+        height: 0.375rem;
+        background-color: theme-color(primary);
+        margin-bottom: 1.25rem;
+    }
+}

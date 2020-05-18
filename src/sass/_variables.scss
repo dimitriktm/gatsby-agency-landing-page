@@ -1,9 +1,20 @@
 $theme-colors: (
-  "primary": #0e77ff,
-  "primary-lighter": #16b2ff,
-  "primary-background": rgba(#0e77ff, 0.02),
+    "primary": #0e77ff,
+    "primary-lighter": #16b2ff,
+    "primary-light": #9abfff,
+    "white": #ffffff,
 );
-// $enable-responsive-font-sizes: true;
 $font-family-base: Poppins;
+
 $font-size-base: 1rem;
-$h2-font-size: $font-size-base * 2.2;
+
+$h2-font-size: $font-size-base * 2.625;
+$h3-font-size: $font-size-base * 2.25;
+$h4-font-size: $font-size-base * 1.5;
+
+$font-size-lg: $font-size-base * 1.125;
+$font-size-xl: $font-size-base * 1.25;
+$font-size-2xl: $font-size-base * 1.375;
+
+$input-btn-font-size: $font-size-xl;
+$input-btn-font-size-lg: $h4-font-size;

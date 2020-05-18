@@ -1,12 +1,20 @@
-@use 'sass:map';
+@import "../../sass/variables";
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins/_breakpoints";
-@import "../../sass/variables";
-#case-studies {
-  padding: 12.5rem 0;
-  background-color: map-get($map: $theme-colors, $key: primary-background);
-  background-image: url(../../images/vectors/plane.svg);
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
+
+.case-studies {
+    position: relative;
+    padding: 12.5rem 0;
+    background-color: rgba(theme-color(primary), 0.02);
+    background-image: url(../../images/vectors/plane.svg);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+.case-studies-decoration-pattern {
+    position: absolute;
+    top: -15rem;
+    right: -15rem;
+    transform: rotate(90deg);
 }
