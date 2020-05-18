@@ -4,9 +4,9 @@
 @import "~bootstrap/scss/mixins/_breakpoints";
 
 .contacts {
+    padding-bottom: 0;
     position: relative;
-    padding-top: 0rem;
-
+    overflow: unset;
     @include media-breakpoint-up(md) {
         background: url(../../images/vectors/footer.svg) left 103% / 50%
                 no-repeat,

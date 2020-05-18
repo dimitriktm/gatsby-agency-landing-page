@@ -14,7 +14,6 @@
             rgba(theme-color(primary), 1) 100%
         );
     }
-    padding: 9.25rem 0;
 }
 
 .services-right-col {
@@ -40,6 +39,11 @@
     .services-card-body-text {
         margin-bottom: 2.5rem;
     }
+    .list-group-item {
+        display: flex;
+        align-items: center;
+    }
+
     .list-group-item,
     .card-body {
         padding: 0;
@@ -69,6 +73,7 @@
     border-radius: 0.8rem;
     width: $icon-square-size;
     height: $icon-square-size;
+    flex-shrink: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;

@@ -5,6 +5,7 @@ import HeaderContentBlock from "../../components/header-content-block"
 
 import CardsGroup from "../../components/cards-group"
 import CaseStudyCard from "../../components/case-study-card"
+import PageBlock from "../../components/page-block"
 
 import CardImg_1 from "../../images/content/card-1.jpg"
 import CardImg_2 from "../../images/content/card-2.jpg"
@@ -13,7 +14,7 @@ import CaseStudiesDecorationPattern from "../../images/vectors/pattern.svg"
 
 import "./case-studies.scss"
 export default () => (
-    <section className="case-studies">
+    <PageBlock spacing="lg" className="case-studies">
         <div className="case-studies-decoration-pattern">
             <img src={CaseStudiesDecorationPattern} />
         </div>
@@ -44,5 +45,5 @@ export default () => (
                 ]}
             ></CardsGroup>
         </div>
-    </section>
+    </PageBlock>
 )

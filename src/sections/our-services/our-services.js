@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col"
 import Card from "react-bootstrap/Card"
 import ListGroup from "react-bootstrap/ListGroup"
 import ListGroupItem from "react-bootstrap/ListGroupItem"
+import PageBlock from "../../components/page-block"
 
 import BtnWithOpacity from "../../components/btn-with-opacity"
 import HeadingsGroup from "../../components/headings-group"
@@ -14,7 +15,7 @@ import ListSvg from "../../images/vectors/list.svg"
 import "./our-services.scss"
 export default () => {
     return (
-        <section id="our-services">
+        <PageBlock id="our-services">
             <Container className="services-container">
                 <Row className="justify-content-between">
                     <Col xs={12} md={5} className="mt-lg-5 mb-5 mb-md-0">
@@ -53,26 +54,33 @@ export default () => {
                                         <div className="services-card-checkmark mr-3">
                                             <i className="fas fa-check"></i>
                                         </div>
-                                        Lorem ipsum dolor sit amet, conse ctetur
-                                        adipi scing elit.
+                                        <span>
+                                            Lorem ipsum dolor sit amet, conse
+                                            ctetur adipi scing elit.
+                                        </span>
                                     </ListGroupItem>
                                     <ListGroupItem>
                                         <div className="services-card-checkmark mr-3">
                                             <i className="fas fa-check"></i>
                                         </div>
-                                        Lorem ipsum dolor sit amet,
+                                        <span>Lorem ipsum dolor sit amet,</span>
                                     </ListGroupItem>
                                     <ListGroupItem>
                                         <div className="services-card-checkmark mr-3">
                                             <i className="fas fa-check"></i>
                                         </div>
-                                        conse ctetur adipi scing elit.
+                                        <span>
+                                            conse ctetur adipi scing elit.
+                                        </span>
                                     </ListGroupItem>
                                     <ListGroupItem>
                                         <div className="services-card-checkmark mr-3">
                                             <i className="fas fa-check"></i>
                                         </div>
-                                        Lorem ipsum dolor sit amet, conse ctetur
+                                        <span>
+                                            Lorem ipsum dolor sit amet, conse
+                                            ctetur
+                                        </span>
                                     </ListGroupItem>
                                 </ListGroup>
                             </Card.Body>
@@ -80,6 +88,6 @@ export default () => {
                     </Col>
                 </Row>
             </Container>
-        </section>
+        </PageBlock>
     )
 }

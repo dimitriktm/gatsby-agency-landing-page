@@ -3,9 +3,11 @@ import Container from "react-bootstrap/Container"
 import CardWithLabel from "../../components/card-with-label/card-with-label"
 import HeaderContentBlock from "../../components/header-content-block"
 import CardsGroup from "../../components/cards-group"
+import PageBlock from "../../components/page-block"
+
 import "./workflow.scss"
 export default () => (
-    <section className="workflow" id="workflow">
+    <PageBlock spacing="xl" className="workflow" id="workflow">
         <Container>
             <HeaderContentBlock
                 title="Workflow"
@@ -61,5 +63,5 @@ export default () => (
                 </CardWithLabel>,
             ]}
         />
-    </section>
+    </PageBlock>
 )

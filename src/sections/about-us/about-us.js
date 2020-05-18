@@ -1,16 +1,16 @@
 import React from "react"
 
-import { Link } from "gatsby"
 import Container from "react-bootstrap/Container"
-import BtnRounded from "../../components/btn-rounded"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import HeadingsGroup from "../../components/headings-group"
+import PageBlock from "../../components/page-block"
+
 import documentsImage from "../../images/vectors/documents.svg"
 import "./about-us.scss"
 export default () => {
     return (
-        <section className="about-us" id="about-us">
+        <PageBlock className="about-us" id="about-us">
             <div className="zindex-content">
                 <Container>
                     <Row className="align-items-center justify-content-between">
@@ -41,15 +41,10 @@ export default () => {
                                     non aliquam.
                                 </p>
                             </div>
-                            <Link to="#contact">
-                                <BtnRounded as="div" variant="outline-primary">
-                                    Get started
-                                </BtnRounded>
-                            </Link>
                         </Col>
                     </Row>
                 </Container>
             </div>
-        </section>
+        </PageBlock>
     )
 }

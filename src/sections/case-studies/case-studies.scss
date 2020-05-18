@@ -9,11 +9,6 @@
     background-image: url(../../images/vectors/plane.svg);
     background-position: 50% 100%;
     background-repeat: no-repeat;
-    padding: 8rem 0;
-
-    @include media-breakpoint-up(lg) {
-        padding: 12.5rem 0;
-    }
 }
 .case-studies-decoration-pattern {
     position: absolute;

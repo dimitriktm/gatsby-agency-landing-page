@@ -3,11 +3,6 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins/_breakpoints";
 .about-us {
-    padding: 5rem 0px;
-
-    @include media-breakpoint-up(lg) {
-        padding: 10rem 0rem;
-    }
     @include media-breakpoint-up(lg) {
         background-image: url("../../images/vectors/triangles-composition-2.svg");
         background-repeat: no-repeat;

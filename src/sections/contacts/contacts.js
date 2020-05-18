@@ -1,11 +1,15 @@
 import React from "react"
+import * as Yup from "yup"
+
 import Container from "react-bootstrap/Container"
 import Form from "react-bootstrap/Form"
+import { useFormik } from "formik"
+
 import BtnRounded from "../../components/btn-rounded"
+import PageBlock from "../../components/page-block"
 
 import ContactsDecorationTriangle from "../../images/vectors/triangle.svg"
-import { useFormik } from "formik"
-import * as Yup from "yup"
+
 import "./contacts.scss"
 
 export default () => {
@@ -28,7 +32,7 @@ export default () => {
         }),
     })
     return (
-        <section className="contacts">
+        <PageBlock className="contacts">
             <div className="contacts-decoration-triangle">
                 <img src={ContactsDecorationTriangle} />
             </div>
@@ -156,6 +160,6 @@ export default () => {
                     </Form>
                 </Container>
             </div>
-        </section>
+        </PageBlock>
     )
 }

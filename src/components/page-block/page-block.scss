@@ -1,0 +1,27 @@
+@import "../../sass/variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+
+.page-block {
+    &-md {
+        padding: 6.875rem 0;
+    }
+    &-lg {
+        padding: 8rem 0;
+    }
+    &-xl {
+        padding: 10.75rem 0;
+    }
+    @include media-breakpoint-up(lg) {
+        &-md {
+            padding: 8.875rem 0;
+        }
+        &-lg {
+            padding: 12rem 0;
+        }
+        &-xl {
+            padding: 17.75rem 0;
+        }
+    }
+}

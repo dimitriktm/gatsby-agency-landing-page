@@ -4,9 +4,11 @@ import Container from "react-bootstrap/Container"
 import TechIcon from "../../components/tech-icon/tech-icon"
 import HeaderContentBlock from "../../components/header-content-block"
 import TrianglesComposition from "../../images/vectors/triangles-composition.svg"
+import PageBlock from "../../components/page-block"
+
 import "./technologies.scss"
 export default () => (
-    <section className="technologies" id="technologies">
+    <PageBlock spacing="lg" className="technologies" id="technologies">
         <div className="tech-triangles-decoration">
             <img src={TrianglesComposition} alt="" />
         </div>
@@ -30,5 +32,5 @@ export default () => (
                 </div>
             </Container>
         </div>
-    </section>
+    </PageBlock>
 )
