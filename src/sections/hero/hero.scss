@@ -13,9 +13,12 @@
     align-items: center;
 
     background-position: 30% 62%;
+    padding: 12rem 0;
     @include media-breakpoint-up(lg) {
         min-height: 100vh;
         background-position: 30% 54%;
+        background-size: cover;
+        padding: 6rem 0;
     }
 }
 .hero .container {

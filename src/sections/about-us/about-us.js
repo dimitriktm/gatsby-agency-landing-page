@@ -18,6 +18,7 @@ export default () => {
                             <img
                                 src={documentsImage}
                                 style={{ width: "250%", marginLeft: "-150%" }}
+                                alt=""
                             />
                         </Col>
                         <Col xs={12} md={5} className="px-md-0">

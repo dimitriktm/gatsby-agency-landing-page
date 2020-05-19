@@ -14,9 +14,9 @@ import CaseStudiesDecorationPattern from "../../images/vectors/pattern.svg"
 
 import "./case-studies.scss"
 export default () => (
-    <PageBlock spacing="lg" className="case-studies">
+    <PageBlock spacing="lg" className="case-studies" id="case-studies">
         <div className="case-studies-decoration-pattern">
-            <img src={CaseStudiesDecorationPattern} />
+            <img src={CaseStudiesDecorationPattern} alt="" />
         </div>
         <div className="zindex-content">
             <Container>

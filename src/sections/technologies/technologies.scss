@@ -19,7 +19,7 @@
     }
     display: none;
     @include media-breakpoint-up(lg) {
-        display: inline-block;
+        display: block;
     }
 }
 .tech-heading {

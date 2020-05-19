@@ -1,10 +1,5 @@
 import React from "react"
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import Card from "react-bootstrap/Card"
-import ListGroup from "react-bootstrap/ListGroup"
-import ListGroupItem from "react-bootstrap/ListGroupItem"
+import { Container, Row, Col, Nav, Tab } from "react-bootstrap"
 import PageBlock from "../../components/page-block"
 
 import BtnWithOpacity from "../../components/btn-with-opacity"
@@ -13,80 +8,117 @@ import HeadingsGroup from "../../components/headings-group"
 import ListSvg from "../../images/vectors/list.svg"
 
 import "./our-services.scss"
+
+const ServicesTabPaneContent = ({ title, icon, text }) => (
+    <div className="services-tab-pane-content">
+        <div className="services-tab-pane-content-heading">
+            <img src={icon} alt="" />
+            <h3 className="h2-md ">{title}</h3>
+        </div>
+        <p>{text}</p>
+    </div>
+)
 export default () => {
     return (
         <PageBlock id="our-services">
+            {/* What a mess */}
             <Container className="services-container">
-                <Row className="justify-content-between">
-                    <Col xs={12} md={5} className="mt-lg-5 mb-5 mb-md-0">
-                        <HeadingsGroup
-                            title_primary="Our services"
-                            title_secondary="Transforming your ideas into Reality"
-                        />
-                        <div className="services-btns-group">
-                            <BtnWithOpacity>Web Development</BtnWithOpacity>
-                            <BtnWithOpacity>Mobile Development</BtnWithOpacity>
-                            <BtnWithOpacity>UI/UX Designing</BtnWithOpacity>
-                            <BtnWithOpacity>Branding</BtnWithOpacity>
-                            <BtnWithOpacity>Cloud Technology</BtnWithOpacity>
-                        </div>
-                    </Col>
-                    <Col xs={12} md={7} className="services-right-col">
-                        <Card className="services-card">
-                            <Card.Title className="d-flex align-items-center">
-                                <img
-                                    className="services-card-icon mr-4"
-                                    src={ListSvg}
-                                />
-                                <h4 className="h2 font-weight-semibold">
-                                    UI/UX Designing
-                                </h4>
-                            </Card.Title>
-                            <Card.Body>
-                                <p className="services-card-body-text">
-                                    Lorem ipsum dolor sit amet, conse ctetur
-                                    adipi scing elit. Aliq uam ex odio, is the
-                                    turpis accu msan congue euisque blandit dui
-                                    Pelle ntesque habitant.
-                                </p>
-                                <ListGroup>
-                                    <ListGroupItem>
-                                        <div className="services-card-checkmark mr-3">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                        <span>
-                                            Lorem ipsum dolor sit amet, conse
-                                            ctetur adipi scing elit.
-                                        </span>
-                                    </ListGroupItem>
-                                    <ListGroupItem>
-                                        <div className="services-card-checkmark mr-3">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                        <span>Lorem ipsum dolor sit amet,</span>
-                                    </ListGroupItem>
-                                    <ListGroupItem>
-                                        <div className="services-card-checkmark mr-3">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                        <span>
-                                            conse ctetur adipi scing elit.
-                                        </span>
-                                    </ListGroupItem>
-                                    <ListGroupItem>
-                                        <div className="services-card-checkmark mr-3">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                        <span>
-                                            Lorem ipsum dolor sit amet, conse
-                                            ctetur
-                                        </span>
-                                    </ListGroupItem>
-                                </ListGroup>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
+                <Tab.Container
+                    id="services-tabs-container"
+                    defaultActiveKey="web"
+                >
+                    <Row className="justify-content-between">
+                        <Col xs={12} md={5} className="mt-lg-5 mb-5 mb-md-0">
+                            <HeadingsGroup
+                                title_primary="Our services"
+                                title_secondary="Transforming your ideas into Reality"
+                            />
+                            <Nav className="services-tabs-btns-group">
+                                <Nav.Item>
+                                    <Nav.Link
+                                        eventKey="web"
+                                        className=" btn button-with-opacity font-weight-semibold"
+                                    >
+                                        Web development
+                                    </Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link
+                                        eventKey="mobile"
+                                        className=" btn button-with-opacity font-weight-semibold"
+                                    >
+                                        Mobile development
+                                    </Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link
+                                        eventKey="uiux"
+                                        className=" btn button-with-opacity font-weight-semibold"
+                                    >
+                                        UI/UX Designing
+                                    </Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link
+                                        eventKey="branding"
+                                        className=" btn button-with-opacity font-weight-semibold"
+                                    >
+                                        Branding
+                                    </Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link
+                                        eventKey="cloud"
+                                        className=" btn button-with-opacity font-weight-semibold"
+                                    >
+                                        Cloud Technology
+                                    </Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                        </Col>
+                        <Col xs={12} md={7} className="services-right-col">
+                            <div className="services-tab-content">
+                                <Tab.Content>
+                                    <Tab.Pane eventKey="web">
+                                        <ServicesTabPaneContent
+                                            title="Web Development"
+                                            icon={ListSvg}
+                                            text="Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex odio, is the  turpis accu msan congue euisque blandit dui Pelle ntesque habitant.Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex odio, is the  turpis accu msan congue euisque blandit dui Pelle ntesque habitant."
+                                        />
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="mobile">
+                                        <ServicesTabPaneContent
+                                            title="Mobile Development"
+                                            icon={ListSvg}
+                                            text="Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex odio, is the  turpis accu msan congue euisque blandit dui Pelle ntesque habitant.Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex odio, is the  turpis accu msan congue euisque blandit dui Pelle ntesque habitant."
+                                        />
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="uiux">
+                                        <ServicesTabPaneContent
+                                            title="UI/UX Designing"
+                                            icon={ListSvg}
+                                            text="Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex odio, is the  turpis accu msan congue euisque blandit dui Pelle ntesque habitant.Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex odio, is the  turpis accu msan congue euisque blandit dui Pelle ntesque habitant."
+                                        />
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="branding">
+                                        <ServicesTabPaneContent
+                                            title="Branding"
+                                            icon={ListSvg}
+                                            text="Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex odio, is the  turpis accu msan congue euisque blandit dui Pelle ntesque habitant.Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex odio, is the  turpis accu msan congue euisque blandit dui Pelle ntesque habitant."
+                                        />
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="cloud">
+                                        <ServicesTabPaneContent
+                                            title="Cloud Technology"
+                                            icon={ListSvg}
+                                            text="Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex odio, is the  turpis accu msan congue euisque blandit dui Pelle ntesque habitant.Lorem ipsum dolor sit amet, conse ctetur adipi scing elit. Aliq uam ex odio, is the  turpis accu msan congue euisque blandit dui Pelle ntesque habitant."
+                                        />
+                                    </Tab.Pane>
+                                </Tab.Content>
+                            </div>
+                        </Col>
+                    </Row>
+                </Tab.Container>
             </Container>
         </PageBlock>
     )

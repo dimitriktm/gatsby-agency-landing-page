@@ -3,6 +3,7 @@ import HeroBackground from "../../images/vectors/hero.svg"
 import Container from "react-bootstrap/Container"
 import BtnRounded from "../../components/btn-rounded"
 import { Link } from "gatsby"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 import "./hero.scss"
 
@@ -17,21 +18,20 @@ export default () => {
             <Container>
                 <div className="hero-content">
                     <h1 className="display-4 text-white mb-5 font-weight-semibold">
-                        Freebie Web Design
-                        <br />
-                        Web Development Template
-                        <br />
-                        by inkyy.com
+                        Web agency website
                     </h1>
                     <p className="lead text-primary-light mb-5">
                         Our products are fully custom-made, built with the
                         latest technologies and cloud-architectures.{" "}
                     </p>
-                    <Link to="#about-us">
-                        <BtnRounded as="div" variant="light">
-                            Get started
-                        </BtnRounded>
-                    </Link>
+
+                    <BtnRounded
+                        as="div"
+                        variant="light"
+                        onClick={() => scrollTo("#about-us")}
+                    >
+                        Get started
+                    </BtnRounded>
                 </div>
             </Container>
         </section>

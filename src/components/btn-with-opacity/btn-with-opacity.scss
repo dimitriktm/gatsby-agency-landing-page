@@ -11,6 +11,9 @@
         color: map-get($map: $theme-colors, $key: primary);
         border: none;
     }
+    &.active,
+    &:focus,
+    &:active,
     &:hover {
         background-color: rgba(map-get($map: $theme-colors, $key: primary), 1);
         color: $white;

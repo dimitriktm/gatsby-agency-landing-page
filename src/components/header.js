@@ -1,46 +1,62 @@
-import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import PropTypes from "prop-types"
 import React from "react"
-
-import Navbar from "react-bootstrap/Navbar"
-import Nav from "react-bootstrap/Nav"
 import Container from "react-bootstrap/Container"
+import Nav from "react-bootstrap/Nav"
+import Navbar from "react-bootstrap/Navbar"
+import scrollTo from "gatsby-plugin-smoothscroll"
 const Header = ({ siteTitle }) => (
     <header>
-        <Navbar expand="lg" variant="dark" fixed="top">
+        <Navbar
+            collapseOnSelect
+            expand="lg"
+            variant="dark"
+            fixed="top"
+            bg="primary"
+        >
             <Container>
                 <Navbar.Brand>LOGO</Navbar.Brand>
-                <Nav className="d-none d-lg-flex">
-                    <Link
-                        className="text-white mr-3 nav-link"
-                        role="button"
-                        to="#about"
-                    >
-                        About
-                    </Link>
-                    <Link
-                        className="text-white mr-3 nav-link"
-                        role="button"
-                        to="#services"
-                    >
-                        Services
-                    </Link>
-
-                    <Link
-                        className="text-white  mr-3 nav-link"
-                        role="button"
-                        to="#case-studies"
-                    >
-                        Case studies
-                    </Link>
-                    <Link
-                        className="text-white nav-link"
-                        role="button"
-                        to="#contact"
-                    >
-                        Contact
-                    </Link>
-                </Nav>
+                <Navbar.Toggle
+                    aria-controls="navbar-responsive"
+                    style={{ border: "none" }}
+                />
+                <Navbar.Collapse id="navbar-responsive">
+                    <Nav className="d-lg-inline-flex ml-auto">
+                        <Nav.Link
+                            // as="div"
+                            className="text-white mr-3 nav-link"
+                            role="button"
+                            href=""
+                            onClick={() => scrollTo("#about-us")}
+                        >
+                            About Us
+                        </Nav.Link>
+                        <Nav.Link
+                            className="text-white mr-3 nav-link"
+                            role="button"
+                            href=""
+                            onClick={() => scrollTo("#our-services")}
+                        >
+                            Our Services
+                        </Nav.Link>
+                        <Nav.Link
+                            className="text-white mr-3 nav-link"
+                            role="button"
+                            href=""
+                            onClick={() => scrollTo("#case-studies")}
+                        >
+                            Case Studies
+                        </Nav.Link>
+                        <Nav.Link
+                            className="text-white mr-3 nav-link"
+                            role="button"
+                            href=""
+                            onClick={() => scrollTo("#contact-us")}
+                        >
+                            Contact Us
+                        </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
             </Container>
         </Navbar>
     </header>

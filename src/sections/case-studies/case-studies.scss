@@ -13,13 +13,16 @@
 .case-studies-decoration-pattern {
     position: absolute;
     top: -15rem;
-    right: -15rem;
-    transform: rotate(90deg);
+    right: calc(0% - 15rem);
+
+    transform: rotate(-90deg);
     z-index: 10;
-    max-width: 36.25rem;
-    width: 70%;
+    max-height: 36.25rem;
+    height: 70%;
+    overflow: hidden;
     img {
         width: 100%;
+        margin-bottom: 15rem;
     }
     display: none;
     @include media-breakpoint-up(lg) {

@@ -22,16 +22,16 @@ export default () => (
                             <div className="line"></div>
                             <ul>
                                 <li>
-                                    <a href="#">Web development</a>
+                                    <a href="/">Web development</a>
                                 </li>
                                 <li>
-                                    <a href="#">Mobile development</a>
+                                    <a href="/">Mobile development</a>
                                 </li>
                                 <li>
-                                    <a href="#">Cloud Technologies</a>
+                                    <a href="/">Cloud Technologies</a>
                                 </li>
                                 <li>
-                                    <a href="#">UI/UX Design</a>
+                                    <a href="/">UI/UX Design</a>
                                 </li>
                             </ul>
                         </Col>
@@ -41,16 +41,16 @@ export default () => (
 
                             <ul>
                                 <li>
-                                    <a href="#">Terms & Conditions</a>
+                                    <a href="/">Terms & Conditions</a>
                                 </li>
                                 <li>
-                                    <a href="#">Privacy Policy</a>
+                                    <a href="/">Privacy Policy</a>
                                 </li>
                                 <li>
-                                    <a href="#">Imprint</a>
+                                    <a href="/">Imprint</a>
                                 </li>
                                 <li>
-                                    <a href="#">Legal</a>
+                                    <a href="/">Legal</a>
                                 </li>
                             </ul>
                         </Col>
@@ -59,8 +59,8 @@ export default () => (
                             <div className="line"></div>
                             <ul>
                                 <li>
-                                    <a href="#" className="d-flex">
-                                        <i class="fas fa-map-marker-alt mr-2 mt-1"></i>
+                                    <a href="/" className="d-flex">
+                                        <i className="fas fa-map-marker-alt mr-2 mt-1"></i>
                                         <span>
                                             Al. Dummyodl 124/23 floor 123 Lipsum
                                             Street, 02-577 USA.
@@ -72,8 +72,9 @@ export default () => (
                                         href="tel:00 387 65 302 657"
                                         target="_blank"
                                         className="d-flex"
+                                        rel="noopener noreferrer"
                                     >
-                                        <i class="fas fa-phone-alt mr-2 mt-1"></i>
+                                        <i className="fas fa-phone-alt mr-2 mt-1"></i>
                                         <span>00 387 65 302 657</span>
                                     </a>
                                 </li>
@@ -82,8 +83,9 @@ export default () => (
                                         href="mailto:mail@mail.com"
                                         className="d-flex"
                                         target="_blank"
+                                        rel="noopener noreferrer"
                                     >
-                                        <i class="fas fa-envelope mr-2 mt-1"></i>
+                                        <i className="fas fa-envelope mr-2 mt-1"></i>
                                         <span>mail@mail.com</span>
                                     </a>
                                 </li>
