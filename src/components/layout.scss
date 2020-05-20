@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 @use "sass:map";
 @import "../sass/variables";
 @import "~bootstrap/scss/bootstrap";
@@ -33,8 +34,7 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    // overflow-x: hidden;
-    // width: 100%;
+    font-family: Poppins, sans-serif;
 }
 section {
     width: 100%;
