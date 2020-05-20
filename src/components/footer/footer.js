@@ -14,6 +14,15 @@ export default () => (
                         <SocialBtn href="/" icon_name="fab fa-twitter" />
                         <SocialBtn href="/" icon_name="fab fa-instagram" />
                     </div>
+                    <div className="mt-3 mb-3">
+                        <a
+                            href="https://www.inkyy.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Design by <stron>inkyy</stron>
+                        </a>
+                    </div>
                 </Col>
                 <Col xs="12" lg="9" xl="8">
                     <Row className="justify-content-center justify-content-lg-between flex-wrap">
