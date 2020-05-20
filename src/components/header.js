@@ -23,34 +23,37 @@ const Header = ({ siteTitle }) => (
                 <Navbar.Collapse id="navbar-responsive">
                     <Nav className="d-lg-inline-flex ml-auto">
                         <Nav.Link
-                            // as="div"
+                            as="button"
                             className="text-white mr-3 nav-link"
                             role="button"
-                            href=""
+                            href="#about-us"
                             onClick={() => scrollTo("#about-us")}
                         >
                             About Us
                         </Nav.Link>
                         <Nav.Link
+                            as="button"
                             className="text-white mr-3 nav-link"
                             role="button"
-                            href=""
+                            href="#our-services"
                             onClick={() => scrollTo("#our-services")}
                         >
                             Our Services
                         </Nav.Link>
                         <Nav.Link
+                            as="button"
                             className="text-white mr-3 nav-link"
                             role="button"
-                            href=""
+                            href="#case-studies"
                             onClick={() => scrollTo("#case-studies")}
                         >
                             Case Studies
                         </Nav.Link>
                         <Nav.Link
-                            className="text-white mr-3 nav-link"
+                            as="button"
+                            className="text-white mr-3 "
                             role="button"
-                            href=""
+                            href="#contact-us"
                             onClick={() => scrollTo("#contact-us")}
                         >
                             Contact Us

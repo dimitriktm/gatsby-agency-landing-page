@@ -107,3 +107,17 @@ a {
 .list-group-item {
     border: none;
 }
+header nav button.nav-link {
+    // fallbacks
+    background: theme-color(primary);
+    background: none;
+    background: transparent;
+
+    border: none;
+    outline: none;
+    font-size: 1.125rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

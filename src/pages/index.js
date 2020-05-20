@@ -12,7 +12,7 @@ import CaseStudies from "../sections/case-studies"
 import Contacts from "../sections/contacts"
 const IndexPage = () => (
     <Layout>
-        <SEO title="Home" />
+        <SEO title="Web agency" />
         <Hero />
         <AboutUs />
         <OurServices />
